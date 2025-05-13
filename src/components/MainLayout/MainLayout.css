@@ -1,0 +1,222 @@
+.main-layout {
+    min-height: 100vh;
+    background-color: #ffffff;
+    /* Keep or adjust padding-top based on whether MainHeader is inside or outside layout-wrapper */
+    /* If MainHeader is inside layout-wrapper (as in your last JSX example),
+       this padding creates the white space above the grey box. */
+    /* If MainHeader is outside layout-wrapper, this padding creates white space below the header. */
+    padding-top: min(10vh, 10vh); /* Example value */
+}
+
+.layout-wrapper {
+    max-width: 1110px; /* Example max-width */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 20px; /* Padding inside the grey wrapper */
+    background-color: #f7f7f7; /* Grey background */
+    min-height: 100vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+.main-content {
+    /* Padding inside main-content, relative to the layout-wrapper */
+    padding: 40px; /* Example padding */
+    box-sizing: border-box;
+}
+
+.content-section {
+    margin-top: 20px; /* Space above the first section */
+}
+
+.section-header h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em; /* Allinea la base del parallelogramma con la linea base del testo */
+    width: 12px;
+    height: 14px;
+    background-color: black;
+    transform: skewX(-25deg); /* Angolo più contenuto per rendere i lati più simili */
+}
+
+.section-header h2 {
+    padding-left: 24px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+    font-family: 'DM Serif Display', serif;
+    color: #111;
+    margin: 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: left (main article + list) and right (sidebar) */
+    gap: 30px; /* Space between the two columns */
+}
+
+.main-article-column {
+    display: flex;
+    flex-direction: column; /* Stack main article and article list vertically */
+    gap: 30px; /* Space between main article and the list below it */
+}
+
+
+/* Styles for the main article box */
+.main-article {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 2px; /* Small border radius */
+    display: flex;
+    flex-direction: column; /* Stack title/author and image vertically */
+    overflow: hidden; /* Hide anything outside the border radius */
+}
+
+.article-title-section {
+    padding: 30px; /* Padding inside the title/author section */
+    text-align: left;
+}
+
+
+.article-title-section h1 {
+    font-size: 40px; /* Large font size for the main title */
+    font-family: 'DM Serif Display',serif; /* Serif font */
+    margin: 0 0 10px 0; /* Space below the title */
+    line-height: 1.1; /* Adjust line height if needed */
+    color: #111; /* Dark text color */
+}
+
+.main-article-author {
+    font-weight: bold;
+    font-size: 1rem; /* Adjust size if needed */
+    color: black; /* Adjust color if needed */
+}
+
+.article-image-section {
+    width: 100%; /* Make image section take full width */
+    /* height: 100%; /* This might cause issues if content is less than 100% height */
+    /* Remove height: 100% and let the image's aspect ratio determine the height */
+margin-top: 0; /* Remove or adjust margin-top if image is immediately below title section */
+}
+
+.article-image-section img {
+    width: 100%; /* Image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 0; /* No border radius on the image itself */
+}
+
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add spacing between articles */
+    background-color: #f7f7f7; /* Match layout-wrapper background */
+    border-radius: 2px;
+    padding: 10px 0; /* Optional: adjust for vertical breathing room */
+}
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column; /* Stack sidebar items vertically */
+    text-align: left;
+}
+
+.aside-section-title {
+    font-size: 35px; /* Large font size */
+    font-weight: bolder; /* Bolder font weight */
+    font-family: 'DM Serif Display',serif; /* Serif font */
+    color: #003366; /* Dark blue color */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+.aside-card-list {
+    display: flex;
+    flex-direction: column; /* Stack aside cards vertically */
+    gap: 0; /* Gap is handled by aside-divider margin */
+}
+
+.aside-divider {
+    border-bottom: 2px dotted #003366;       /* Thicker dotted line */
+    margin: 20px 30px;  /* Top/Bottom: 18px, Left/Right inset by 20px */             /* More space around it */
+}
+
+
+@media (max-width: 768px) {
+    .aside-card {
+        padding: 16px;
+    }
+
+    .aside-divider {
+        margin: 20px 0;
+    }
+}
+
+
+
+
+.news-strip-container { /* Assuming a container for the NewsStrip */
+    margin-top: 30px; /* Space above the news strip */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+        gap: 20px;
+    }
+
+    .main-article-column {
+        gap: 20px; /* Adjust gap when stacked */
+    }
+
+    .main-article-column,
+    .sidebar {
+        width: 100%; /* Make columns take full width */
+    }
+
+    .main-article {
+        /* Adjust padding and font sizes for mobile */
+    }
+
+    .article-title-section {
+        padding: 20px;
+    }
+
+    .article-title-section h1 {
+        font-size: 30px;
+    }
+
+    .main-article-author {
+        font-size: 0.9rem;
+    }
+
+
+    .aside-section-title {
+        font-size: 25px; /* Adjust size for mobile */
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem; /* Adjust size for mobile */
+        padding-left: 20px;
+    }
+
+    .section-header h2::before {
+        font-size: 1rem;
+    }
+
+    /* Adjust padding in .main-content if needed */
+    .main-content {
+        padding: 20px;
+    }
+}

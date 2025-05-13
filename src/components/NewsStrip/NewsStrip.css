@@ -1,0 +1,54 @@
+/* NewsStrip.css */
+.news-strip-wrapper {
+    margin-left: -60px;
+    margin-right: -60px;
+    padding: 10px 0; /* Added top/bottom padding */
+    background-color: inherit;
+    width: calc(100% + 120px); /* Ensure it takes the full width including negative margins */
+    overflow: hidden; /* Prevent horizontal scrolling on the wrapper */
+}
+
+.news-strip-title {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 26px; /* Space for the parallelogram */
+    margin-left: 60px; /* Align with first card */
+    color: inherit;
+    font-family: 'DM Serif Display', serif;
+    display: flex;
+    align-items: center;
+}
+
+.news-strip-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 15px;
+    height: 20px;
+    transform: translateY(-50%) skewX(-25deg);
+    background-color: currentColor;
+}
+
+.news-strip {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* Increased spacing between cards */
+    overflow-x: auto;
+    padding: 0 50px 15px 50px; /* Increased left/right padding */
+    scrollbar-width: thin;
+    width: 100%; /* Make sure it takes full width */
+}
+
+/* Make scrollbar more subtle */
+.news-strip::-webkit-scrollbar {
+    height: 6px;
+}
+
+.news-strip::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}

@@ -1,0 +1,67 @@
+.news-card {
+    position: relative;
+    box-shadow: 0 2px 10px 0 rgba(36, 51, 71, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 220px; /* Adjusted to 220px as requested */
+    min-width: 220px; /* Minimum width to prevent shrinking */
+    margin: 15px 10px; /* Reduced margins a bit */
+    transition: box-shadow .2s;
+    height: 230px; /* Adjusted to 230px as requested */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.news-card:hover {
+    box-shadow: 0 6px 20px 0 rgba(36, 51, 71, 0.16);
+}
+
+.news-image-wrapper {
+    width: 100%;
+    height: 55%;
+    background: #f5f5f5;
+    flex: 0 0 50%; /* Fixed at 50% of card height */
+}
+
+.news-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.news-content {
+    padding: 10px 12px; /* Slightly reduced padding for smaller card */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    background: #fff;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.news-category {
+    color: #000;
+    font-size: 13px; /* Slightly smaller font for smaller card */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin: 0 0 3px 0;
+}
+
+.news-category .slashes {
+    color: #003366;
+    margin-right: 1px;
+}
+
+.news-subtitle {
+    font-family: 'DM Serif Display',serif;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.25; /* Slightly smaller font for smaller card */
+    text-align: left;
+    margin: 3px 0 0 0;
+}

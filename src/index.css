@@ -1,12 +1,15 @@
+/* index.css */
+
+/* Import dei font DM Sans e PT Serif da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  letter-spacing: -0.5px; /* or -1px if needed */
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: black;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,55 +17,35 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-weight: bold;
+  color: #1a3b70;
   text-decoration: inherit;
+  font-family: 'DM Sans', sans-serif;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #1a3b70;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  font-family: "DM Sans", sans-serif;
+  background-color: white; /* Sfondo nero per l'intera pagina */
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 1rem;
   line-height: 1.1;
+  font-family: "DM Sans", sans-serif;
+  font-weight:bold;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 110px; /* Spazio per la TopNav */
+  box-sizing: border-box;
 }

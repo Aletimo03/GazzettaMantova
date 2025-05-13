@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.jsx
+import './App.css';
+import TopNav from "./components/TopNav/TopNav.jsx";
+import MainLayout from "./components/MainLayout/MainLayout.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more gg ehy
-      </p>
-    </>
-  )
+    return (
+        <>
+            <nav> <TopNav /> </nav>
+            <div className="main-layout-container">
+                <MainLayout>
+                    <div className="layout-content">
+                        <section>
+                            <h2>Titolo Articolo 1</h2>
+                            <p>Contenuto dell'articolo 1...</p>
+                        </section>
+                        <section>
+                            <h2>Titolo Sezione 2</h2>
+                            <p>Contenuto della sezione 2...</p>
+                        </section>
+                    </div>
+                    <footer className="main-footer">
+                        <p>&copy; 2025 Il Tuo Sito</p>
+                    </footer>
+                </MainLayout>
+            </div>
+        </>
+    );
 }
 
-export default App
+export default App;

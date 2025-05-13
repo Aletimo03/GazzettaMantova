@@ -1,0 +1,165 @@
+.main-header {
+    width: 100%;
+    margin: 0 auto;
+    z-index: 800;
+    position: relative;
+    padding: 0;
+}
+
+.main-header-container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* <-- important: align to bottom */
+    padding: 12px 0 4px; /* tighter padding at bottom */
+    width: 100%;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+}
+
+.weather-widget {
+    display: flex;
+    align-items: baseline;
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(4px); /* move entire widget downward */
+}
+
+.weather-widget:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    transform: translateY(2px); /* pushes temp & location slightly down */
+}
+
+.weather-icon {
+    color: #1a3b70;
+    font-size: 2rem;
+    margin-right: 8px;
+    line-height: 1;
+    transform: translateY(8px); /* pushes icon a bit lower than text baseline */
+}
+
+
+.temperature .temperature {
+    font-family: 'DM Serif Display',serif;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.location {
+    font-family: 'DM Serif Display',serif;
+    font-size: 14px; /* bigger */
+    font-weight: bold; /* BOLDER */
+    color: black;
+}
+
+.main-logo {
+    text-align: center;
+    flex: 1; /* center logo */
+}
+
+.main-logo img {
+    max-width: 90%;
+    height: auto;
+}
+
+.date {
+    font-size: 14px;
+    font-family: 'DM Serif Display',serif;;
+    font-weight: bold;
+    text-align: right;
+}
+
+.nav-line {
+    height: 5px;
+    background-color: black;
+    width: 100%;
+    margin: 0; /* no extra margin */
+}
+
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 20px;
+    padding: 8px 0;
+}
+
+.category,
+.category-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding:6px 6px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    height: 25px;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.category {
+    background-color: transparent;
+    color: #666;
+}
+
+.category:hover {
+    background-color: lightgrey;
+    color: #fff;
+}
+
+.category .slashes {
+    color: #003366;
+    margin-right: 5px;
+}
+
+.category:hover .slashes {
+    color: #fff !important;
+}
+
+.category-button.green {
+    background-color: #008000;
+    color: white;
+}
+
+.category-button.green:hover {
+    background-color: transparent;
+    color: #008000;
+}
+
+.category-button.red {
+    background-color: #d50000;
+    color: white;
+}
+
+.category-button.red:hover {
+    background-color: transparent;
+    color: #d50000;
+}
+
+.category-button .icon,
+.category .icon {
+    margin-right: 4px;
+}
+
+.nav-underline {
+    width: 100%;
+    border-bottom: 1px solid black;
+}

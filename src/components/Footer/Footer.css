@@ -1,0 +1,286 @@
+.footer {
+    padding: 20px;
+    color: black;
+    font-size: 0.9rem;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+/* Dividers */
+.footer-top-divider,
+.footer-bottom-divider {
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-top: 2px dotted #000;
+    margin: 0 0;
+}
+
+.footer-divider {
+    border: none;
+    background-color: #000;
+    height: 5px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+/* Footer Top Section */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0;
+    gap: 20px;
+}
+
+.footer-section-container {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-family: 'DM Serif Display',serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.footer-content-box {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 0;
+    height: 100%;
+    text-align: center;
+}
+
+.blue-box {
+    background-color: #003366;
+    color: white;
+}
+
+.footer-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.newspaper-img {
+}
+
+.content-title {
+    font-family: 'DM Serif Display',serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    margin: 4px 4px;
+}
+
+.scopri-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: .25rem .5rem;
+    text-decoration: none;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.abbonati-btn {
+    display: inline-block;
+    background-color: white;
+    color: #0A3D62;
+    padding: .25rem .5rem;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Footer Middle Section */
+.footer-middle {
+    margin: 15px 0;
+}
+
+.footer-nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-right-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-social a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.necrologie-link {
+    color: #003366;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.necrologie-link:hover {
+    text-decoration: underline;
+}
+
+.abbonati-link {
+    display: inline-block;
+    background-color: #003366;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    position: relative;
+    padding-top: 5px;
+}
+
+.gruppo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.gruppo-title {
+    color: #333;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.group-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.group-logo {
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    margin: 5px 0;
+}
+
+.company-section {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.company-info,
+.copyright {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.footer-number {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-section-container {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .footer-nav-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-right-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .group-logos {
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .gruppo-section {
+        align-items: center;
+    }
+
+    .company-section {
+        text-align: center;
+    }
+
+    .footer-number {
+        position: static;
+        display: block;
+        margin-top: 10px;
+        text-align: right;
+    }
+}
