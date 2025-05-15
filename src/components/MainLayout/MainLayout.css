@@ -52,15 +52,25 @@
 .section-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 
 
-.content-grid {
+.first-type-content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Two columns: left (main article + list) and right (sidebar) */
     gap: 30px; /* Space between the two columns */
+}
+
+.second-type-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 24px; /* spacing between cards */
+}
+
+.third-type-content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .main-article-column {
@@ -220,3 +230,31 @@ margin-top: 0; /* Remove or adjust margin-top if image is immediately below titl
         padding: 20px;
     }
 }
+
+
+.bottom-banner {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.news-strips-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.news-strip-adv {
+    background-color: #95a5bf;
+    padding: 25px 0; /* Optional: add vertical spacing */
+    margin-left: -60px;
+    margin-right: -60px;
+    display: flex;
+    justify-content: center;
+}
+
+
