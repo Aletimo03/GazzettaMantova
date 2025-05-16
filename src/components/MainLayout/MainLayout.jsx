@@ -10,7 +10,6 @@ import NecrologieCard from "../NecrologieCard/NecrologieCard.jsx";
 
 const MainContent = () => {
     return (
-        <div className="container">
             <div className="content-section">
 
                 <div className="first-type-content-grid">
@@ -579,8 +578,6 @@ const MainContent = () => {
 
                     </aside>
                 </div>
-
-            </div>
         </div>
     );
 };
@@ -589,7 +586,7 @@ const MainLayout = () => {
     return (
         <div className="main-layout">
             <div className="layout-wrapper">
-                <MainHeader />
+                    <MainHeader />
                 <div className="main-content">
                     <MainContent />
                 </div>

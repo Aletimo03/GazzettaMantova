@@ -1,9 +1,11 @@
+/* Main header wrapper */
 .main-header {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     z-index: 800;
     position: relative;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .main-header-container {
@@ -12,15 +14,30 @@
     margin: 0 auto;
 }
 
+/* Responsive layout tweaks */
+@media (max-width: 828px) {
+    .main-header-container {
+        padding: 0 8px;
+    }
+}
 
+/* Top header layout */
 .top-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* <-- important: align to bottom */
-    padding: 12px 0 4px; /* tighter padding at bottom */
+    align-items: flex-end;
+    padding: 12px 0 4px;
     width: 100%;
 }
 
+@media (max-width: 828px) {
+    .top-header,
+    .nav-line {
+        display: none;
+    }
+}
+
+/* Weather Widget */
 .temperature {
     display: flex;
     align-items: center;
@@ -30,7 +47,7 @@
     display: flex;
     align-items: baseline;
     transition: transform 0.2s ease-in-out;
-    transform: translateY(4px); /* move entire widget downward */
+    transform: translateY(4px);
 }
 
 .weather-widget:hover {
@@ -43,7 +60,7 @@
     flex-direction: row;
     align-items: baseline;
     gap: 6px;
-    transform: translateY(2px); /* pushes temp & location slightly down */
+    transform: translateY(2px);
 }
 
 .weather-icon {
@@ -51,26 +68,26 @@
     font-size: 2rem;
     margin-right: 8px;
     line-height: 1;
-    transform: translateY(8px); /* pushes icon a bit lower than text baseline */
+    transform: translateY(8px);
 }
 
-
 .temperature .temperature {
-    font-family: 'DM Serif Display',serif;
+    font-family: 'DM Serif Display', serif;
     font-size: 1.9rem;
     font-weight: bold;
 }
 
 .location {
-    font-family: 'DM Serif Display',serif;
-    font-size: 14px; /* bigger */
-    font-weight: bold; /* BOLDER */
+    font-family: 'DM Serif Display', serif;
+    font-size: 14px;
+    font-weight: bold;
     color: black;
 }
 
+/* Logo + Date */
 .main-logo {
     text-align: center;
-    flex: 1; /* center logo */
+    flex: 1;
 }
 
 .main-logo img {
@@ -80,7 +97,7 @@
 
 .date {
     font-size: 14px;
-    font-family: 'DM Serif Display',serif;;
+    font-family: 'DM Serif Display', serif;
     font-weight: bold;
     text-align: right;
 }
@@ -89,7 +106,19 @@
     height: 5px;
     background-color: black;
     width: 100%;
-    margin: 0; /* no extra margin */
+    margin: 0;
+}
+
+/* ================================
+   CATEGORY NAVIGATION
+   ================================ */
+
+.category-nav-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
 }
 
 .category-nav {
@@ -99,22 +128,107 @@
     align-items: center;
     gap: 5px 20px;
     padding: 8px 0;
+    overflow-x: visible;
+    scrollbar-width: auto;
 }
 
+/* Small screen: Enable horizontal scroll */
+@media (max-width: 828px) {
+    .category-nav-wrapper {
+        overflow: hidden;
+    }
+
+    .category-nav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 8px;
+        gap: 5px 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .category-nav::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Scroll Overlays */
+.scroll-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    opacity: 0.3;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-overlay.right {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.scroll-overlay.left {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+/* Scroll Overlay Visibility on Mobile */
+@media (max-width: 828px) {
+    .scroll-overlay {
+        visibility: visible;
+    }
+
+    .scroll-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.scroll-arrow {
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Category Items */
 .category,
 .category-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding:6px 6px;
+    padding: 6px;
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
     height: 25px;
     border-radius: 2px;
     box-sizing: border-box;
+    flex-shrink: 1;
+    white-space: normal;
+    min-width: min-content;
 }
 
+@media (max-width: 828px) {
+    .category,
+    .category-button {
+        font-size: 12px;
+        padding: 4px;
+        height: auto;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+}
+
+/* Category colors */
 .category {
     background-color: transparent;
     color: #666;
@@ -134,6 +248,7 @@
     color: #fff !important;
 }
 
+/* Green button */
 .category-button.green {
     background-color: #008000;
     color: white;
@@ -144,6 +259,7 @@
     color: #008000;
 }
 
+/* Red button */
 .category-button.red {
     background-color: #d50000;
     color: white;
@@ -154,11 +270,13 @@
     color: #d50000;
 }
 
+/* Icon in categories */
 .category-button .icon,
 .category .icon {
     margin-right: 4px;
 }
 
+/* Bottom border */
 .nav-underline {
     width: 100%;
     border-bottom: 1px solid black;

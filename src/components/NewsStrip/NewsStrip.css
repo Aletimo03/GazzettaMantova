@@ -1,10 +1,7 @@
 /* NewsStrip.css */
 .news-strip-wrapper {
-    margin-left: -60px;
-    margin-right: -60px;
     padding: 10px 0; /* Added top/bottom padding */
     background-color: inherit;
-    width: calc(100% + 120px); /* Ensure it takes the full width including negative margins */
     overflow: hidden; /* Prevent horizontal scrolling on the wrapper */
 }
 

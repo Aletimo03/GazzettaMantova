@@ -51,7 +51,9 @@ const TopNav = () => {
                         <div className="top-nav-links">
                             <ul>
                                 <li>
-                                    <a href="#"><FaRegNewspaper /> Edizione digitale</a>
+                                    <a href="#">
+                                        <span className="icon"><FaRegNewspaper /></span> Edizione digitale
+                                    </a>
                                 </li>
 
                                 <li>
@@ -60,7 +62,9 @@ const TopNav = () => {
                                             <div key={i} className="dot"></div>
                                         ))}
                                     </div>
-                                    <a href="#"><MdOutlineMailOutline/> Newsletter</a>
+                                    <a href="#">
+                                        <span className="icon"><MdOutlineMailOutline /></span> Newsletter
+                                    </a>
                                 </li>
 
                                 <li>
@@ -69,7 +73,9 @@ const TopNav = () => {
                                             <div key={i} className="dot"></div>
                                         ))}
                                     </div>
-                                    <a href="#"><FaWhatsapp /> Segnala</a>
+                                    <a href="#">
+                                        <span className="icon"><FaWhatsapp /></span> Segnala
+                                    </a>
                                 </li>
 
                                 <li>

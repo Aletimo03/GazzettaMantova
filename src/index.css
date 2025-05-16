@@ -29,9 +29,11 @@ a:hover {
 
 body {
   margin: 0;
+  width: 100%;
   font-family: "DM Sans", sans-serif;
   background-color: white; /* Sfondo nero per l'intera pagina */
   min-height: 100vh;
+  padding: 0;
 }
 
 h1 {
@@ -46,6 +48,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding-top: 110px; /* Spazio per la TopNav */
+  padding-top: 110px; /* Spazio per il TopNav */
   box-sizing: border-box;
+  width: 100%;
+  margin: 0;
 }
