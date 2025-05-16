@@ -14,7 +14,7 @@ const WeatherWidget = ({ temperature, location }) => (
 );
 
 const MainHeader = () => {
-    const otherCategories = ['SPETTACOLI', 'CULTURA', 'VIDEO', 'ITALIA', 'CINEMA', 'SPORT'];
+    const otherCategories = ['SPETTACOLI', 'CULTURA', 'VIDEO', 'ITALIA', 'CINEMA'];
     const categoryNavRef = useRef(null);
 
     const [canScrollLeft, setCanScrollLeft] = useState(false);

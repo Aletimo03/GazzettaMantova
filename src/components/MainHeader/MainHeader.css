@@ -220,7 +220,6 @@
 @media (max-width: 828px) {
     .category,
     .category-button {
-        font-size: 12px;
         padding: 4px;
         height: auto;
         flex-shrink: 0;
