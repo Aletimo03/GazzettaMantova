@@ -1,7 +1,7 @@
 import React from 'react';
 import './Article.css'; // Import the updated CSS
 
-const Article = ({ preview, author, image }) => {
+const Article = ({ preview, author, image,category }) => {
     return (
         <div className="article">
             <div className="article-image-container">
@@ -12,6 +12,11 @@ const Article = ({ preview, author, image }) => {
                 )}
             </div>
             <div className="article-content">
+                    {category && (
+                        <div className="article-category">
+                            <span className="slashes">///</span> {category}
+                        </div>
+                    )}
                 <h2 className="article-title">{preview}</h2>
                 {author && <p className="article-author">di {author}</p>}
             </div>

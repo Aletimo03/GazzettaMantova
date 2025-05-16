@@ -1,23 +1,30 @@
 import React from 'react';
 import './NewsCard.css';
 
-const NewsCard = () => {
+const NewsCard = ({ image, skewedTitle, category, subtitle }) => {
     return (
         <div className="news-card">
             <div className="news-image-wrapper">
                 <img
                     className="news-image"
-                    src="https://placehold.co/220x123"
-                    alt="Crowd in Piazza San Pietro"
+                    src={image}
+                    alt={subtitle || "News image"}
                 />
+                {skewedTitle && (
+                    <div className="skewed-title-container">
+                        <div className="skewed-title">{skewedTitle}</div>
+                    </div>
+                )}
             </div>
             <div className="news-content">
-                 <span className="news-category">
-                        <span className="slashes">///</span> I FUNERALI DEL PONTEFICE
+                {category && (
+                    <span className="news-category">
+                        <span className="slashes">///</span> {category}
                     </span>
-                <p className="news-subtitle">
-                    In piazza San Pietro squadre di soccorso mantovane e oltre 60 ragazzi partiti da Viadana
-                </p>
+                )}
+                {subtitle && (
+                    <p className="news-subtitle">{subtitle}</p>
+                )}
             </div>
         </div>
     );

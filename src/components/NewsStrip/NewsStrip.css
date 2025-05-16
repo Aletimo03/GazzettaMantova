@@ -12,7 +12,6 @@
     position: relative;
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 20px;
     text-align: left;
     padding-left: 26px; /* Space for the parallelogram */
     margin-left: 60px; /* Align with first card */
@@ -41,14 +40,4 @@
     padding: 0 50px 15px 50px; /* Increased left/right padding */
     scrollbar-width: thin;
     width: 100%; /* Make sure it takes full width */
-}
-
-/* Make scrollbar more subtle */
-.news-strip::-webkit-scrollbar {
-    height: 6px;
-}
-
-.news-strip::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
 }

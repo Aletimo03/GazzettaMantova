@@ -1,7 +1,7 @@
 import React from 'react';
 import './AsideCard.css';
 
-const AsideCard = ({ image, category, title }) => {
+const AsideCard = ({ image, category, title, author, date }) => {
     return (
         <div className="aside-card">
             <div className="aside-card-content">
@@ -14,6 +14,10 @@ const AsideCard = ({ image, category, title }) => {
                     </div>
                     <div className="aside-card-title">
                         {title}
+                    </div>
+                    {author && <p className="article-author">di {author}</p>}
+                    <div className="aside-card-date">
+                        {date}
                     </div>
                 </div>
             </div>

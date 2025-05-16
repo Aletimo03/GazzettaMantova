@@ -2,15 +2,24 @@ import React from 'react';
 import './NewsStrip.css';
 import NewsCard from "../NewsCard/NewsCard.jsx";
 
-const NewsStrip = ({ title, backgroundColor , titleColor }) => {
+const NewsStrip = ({ title, backgroundColor, titleColor, cards = [] }) => {
     return (
         <div className="news-strip-wrapper" style={{ backgroundColor }}>
-            <h2 className="news-strip-title" style={{ color: titleColor }}>{title}</h2>
+            {title && (
+                <h2 className="news-strip-title" style={{ color: titleColor }}>
+                    {title}
+                </h2>
+            )}
             <div className="news-strip">
-                <NewsCard />
-                <NewsCard />
-                <NewsCard />
-                <NewsCard />
+                {cards.map((card, index) => (
+                    <NewsCard
+                        key={index}
+                        image={card.image}
+                        skewedTitle={card.skewedTitle}
+                        category={card.category}
+                        subtitle={card.subtitle}
+                    />
+                ))}
             </div>
         </div>
     );

@@ -42,28 +42,33 @@
 
 /* Article Title */
 .article-title {
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 600;
+    line-height: 1.2;
     color: #111;
+    padding-top: 10px;
+    padding-right: 10px;
     margin: 0 0 8px 0; /* Margin below the title */
     text-align: left; /* Ensure title is left-aligned */
+}
+
+
+.article-category {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.article-category .slashes {
+    color: #003366;
+    margin-right: 2px;
 }
 
 /* Article Author */
 .article-author {
     font-size: 15px;
-    color: black;
     font-weight: bold; /* Set font weight to bold for author */
-    text-align: left; /* Ensure author is left-aligned */
 }
 
-/* Article Preview Text */
-.article-preview {
-    font-size: 21px; /* Font size for the preview */
-    font-weight: 500; /* Set font weight to 500 for the preview */
-    color: #666;
-    margin: 0 0 12px 0; /* No top margin, only bottom margin */
-    text-align: left; /* Ensure preview is left-aligned */
-    padding-right: 20px; /* Add right padding to prevent text from taking up all space */
-    line-height: 1.4; /* Add line height for better readability */
-}
+
